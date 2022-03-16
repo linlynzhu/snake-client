@@ -12,6 +12,10 @@ const connect = function() {
   conn.on('connect', () => {
     console.log('connected, game start');
     conn.write('Name: Lyn');
+    setInterval(() => {
+      conn.write('Move: up');
+    }, 50);
+    //conn.write('Move: up');
   });
   conn.on('data', (data) => {
     console.log('Server says: ', data);
