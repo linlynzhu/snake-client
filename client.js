@@ -14,7 +14,7 @@ const connect = function() {
     conn.write('Name: Lyn');
     setInterval(() => {
       conn.write('Move: up');
-    }, 50);
+    }, 1000);
     //conn.write('Move: up');
   });
   conn.on('data', (data) => {
